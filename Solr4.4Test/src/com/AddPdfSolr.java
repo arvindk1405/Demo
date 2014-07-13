@@ -21,7 +21,7 @@ public class AddPdfSolr {
 		req.addFile(new File("F:/sample/LucidWorksSearch-v2.5.pdf"), null);
 		req.setParam(ExtractingParams.EXTRACT_ONLY, "true");
 		NamedList<Object> result = server.request(req);
-		System.out.println("Result: " + result);
+		System.out.println("Result: add " + result);
 		server.commit();
 		System.out.println("success");
  } catch (MalformedURLException e) {
