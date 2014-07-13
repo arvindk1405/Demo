@@ -17,7 +17,7 @@ public class AddPdfSolr {
 		SolrServer server = new HttpSolrServer("http://localhost:8081/solr");
 		ContentStreamUpdateRequest req = new ContentStreamUpdateRequest("/update/extract");
 		
-		//Here file contains the data as document structure with field type otherwis show the error
+		///Here file contains the data as document structure with field type otherwis show the error
 		req.addFile(new File("F:/sample/LucidWorksSearch-v2.5.pdf"), null);
 		req.setParam(ExtractingParams.EXTRACT_ONLY, "true");
 		NamedList<Object> result = server.request(req);
